@@ -47,14 +47,18 @@ printFunctionReturn(cb)
 ```
 ### Functions with callbacks
 
-A function has a callback if one or more parameters:
+A callback function is a function passed into another function as an argument, a function has a callback if one or more parameters:
 * is a function AND
 * is executed, or called back, in the main function body.
 
-### Synchronous callback functions
+### Synchronous callback
 
+Synchronous callback functions are executed immediately by the JS interpreter, it doesnt matter how much time it takes, it will pause until the function task has completed and then will continue with the next line of code. This is called blocking behaviour - the JS interpreter will wait for a syncrhonous function to complete. 
 
-### Asynchronous callback functions
+### Asynchronous callback
+
+Asynchronous callback functions means that JS can do many different tasks at the same time, and come back with the easiest task, while in the background its doing other tasks.
+
 
 Another type of higher order function is one that returns a function. 
 
