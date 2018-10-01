@@ -10,21 +10,27 @@
 
 <body>
   <h1 id="heading">Hello world!</h1>
+  <!-- global namespace/environment/frame  --> window
   <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
-
+  <!-- $, jQuery, window -->
   <script>
+    // $, jQuery, window
     let leftOffset = 0;
+    // leftOffset, $, jQuery, window
     const moveHeading = () => {
-      $("#heading").offset({ left: leftOffset });
+    // leftOffset, $, jQuery, window
+    $("#heading").offset({ left: leftOffset });
       leftOffset++;
       if (leftOffset > 100) {
         leftOffset = 0;
       }
     };
+    // moveHeading, leftOffset, $, jQuery, window
 
     setInterval(moveHeading, 30);
 
     const clickCallback = (event) => console.log(`Click! x:${event.pageX} y:${event.pageY}`)
+    // clickCallback, moveHeading, leftOffset, $, jQuery, window
 
     $("h1").click(clickCallback);
   </script>
